@@ -37,8 +37,8 @@ $x = smB^c$, $s$ - znak, $1 \leq m < B$ - mantysa, $c$ - cecha \\
 Błąd zaokrąglenia w górę:
 $|rd(x) - x| \leq 2^{-t-1} 2^c$, \\
 $\frac{|rd(x) - x|}{|x|} \leq  \frac{u}{1+u} < u$ \\
-Zbiór reprezentacji arytmetyki: $X_{fl} = rd(X) = \{rd(x) : x \in X \}$
-\textbf{Tw.} Jeśli $|\alpha_i| \leq u, \rho_i = \pm 1, nu < 1$, to $\prod_{i = 1}^{n} (1 + \alpha_i)^{\rho_i} = 1 + \theta_n$, gdzie $|\theta_n| \leq \frac{nu}{1 - nu}$. \\
+Zbiór reprezentacji arytmetyki: $X_{fl} = rd(X) = \{rd(x) : x \in X \}$ \\
+\textbf{Tw.} Jeśli $|\alpha_i| \leq u, |\rho_i| = 1, nu < 1$, to $\prod_{i = 1}^{n} (1 + \alpha_i)^{\rho_i} = 1 + \theta_n$, gdzie $|\theta_n| \leq \frac{nu}{1 - nu}$. \\
 \textbf{Tw.} Jeśli $|\alpha_i| \leq u, nu < 0.01$, to $\prod_{i = 1}^{n} (1 + \alpha_i) = 1 + \theta_n$, gdzie $|\theta_n| \leq 1.01nu$. \\
 \textbf{Def.} Zadanie jest \textbf{źle uwarunkowane}, jeśli niewielkie względne zmiany danych powodują duże względne zmiany wyniku. Wielkości charakteryzujące wpływ zaburzeń danych na zaburzenie wyniku to
 \textbf{wskaźniki uwarunkowania}:\\
@@ -96,7 +96,7 @@ $  \int_{-1}^{1} p(x)(T_k(x))^2 dx = \left\{ \begin{array}{ll}
 
 \section{Normy}
 \subsection{Wektorowe}
-${\displaystyle \|\mathbf {x} \|_{p}={\bigl (}|x_{1}|^{p}+|x_{2}|^{p}+\ldots +|x_{n}|^{p}{\bigr )}^{1/p},\;\|\mathbf {x} \|_{\infty }=\max_{1 \leq j \leq n} {\bigl \{}|x_{i}| {\bigr \}}}$
+${\displaystyle \|\mathbf {x} \|_{p}={\bigl (}|x_{1}|^{p}+|x_{2}|^{p}+\ldots +|x_{n}|^{p}{\bigr )}^{1/p},\;\|\mathbf {x} \|_{\infty }=\max_{1 \leq j \leq n} {\bigl \{}|x_{i}| {\bigr \}}}$ \\
 Norma musi spełniać 3 warunki:\\
 ${\displaystyle \|x\|=0\Rightarrow x=0;\; \|\alpha x\|=|\alpha |\|x\|;\;  \|x+y\|\leqslant \|x\|+\|y\|.}$
 \subsection{Macierzowe}
@@ -129,7 +129,8 @@ $
 $
 
 \section{Kwadratury interpolacyjne}
-\noindent $I_p(f) = \int_{a}^{b}p(x)f(x)dx \approx \sum_{k=0}^{n}A_kf(x_k)$, wiel. węzłowy $\omega(x) = (x-x_0)(x-x_1)..(x-x_n)$
+\noindent $I_p(f) = \int_{a}^{b}p(x)f(x)dx \approx \sum_{k=0}^{n}A_kf(x_k)$, \\
+wiel. węzłowy $\omega(x) = (x-x_0)(x-x_1)..(x-x_n)$
 
 \subsection{Kwadratury Newtona-Cotesa}
 $h=(b-a)/n$,\quad $x_k=a+kh$\\
