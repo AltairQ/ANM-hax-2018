@@ -48,10 +48,10 @@ Jeśli $\tilde{y} = f(x + \Delta x)$ (wynik dokładny dla lekko zaburzonych dany
 \section{Interpolacja}
 
 \subsection{Postacie wielomianów interpolacyjnych}
-Lagrange'a:  $L_n(x) =\sum_{k=0}^ny_k
+\textbf{Lagrange'a:} $L_n(x) =\sum_{k=0}^ny_k
 \lambda_k ,gdzie\quad \lambda_k=\frac{\prod_{j=0, j\neq k}^{n}(x-x_j)}{\prod_{j=0, j\neq k}^{n}(x_k-x_j)}$\\
-Barycentryczna:
-$\sigma_k = \prod^n_{j=0, j\neq k}\frac{1}{x_k-x_j}$\\
+\textbf{Barycentryczna:}
+Dla $\sigma_k = \prod^n_{j=0, j\neq k}\frac{1}{x_k-x_j}$\\
 $  L_n(x) = \left\{ \begin{array}{ll}
 \left. \sum_{k=0}^n\frac{\sigma_k}{x-x_k}y_k \middle/ \sum_{k=0}^n\frac{\sigma_k}{x-x_k} \right. & \textrm{gdy $x \notin \left\{ x_0,x_1,\dots,x_n \right\} $}\\
 y_k & \textrm{ $ wpp. $}
@@ -63,15 +63,16 @@ $f(x)-L_n(x) = \frac{1}{(n+1)!}f^{(n+1)}(\xi_x)p_{n+1}(x)$\\
 $\max_{-1\leq x \leq 1} | f(x)-L_n(x) | = \frac{1}{(n+1)!}\max_{-1\leq x \leq 1} | f^{(n+1)}(x) | \max_{-1\leq x \leq 1} | p_{n+1}(x) |$
 
 \subsection{Spline}
-naturalna: $\quad s''(a)=0 \land s''(b)=0$\\
-zupelna: $\quad s'(a)=f'(a) \land s'(b)=f'(b)$\\
-okresowa: $\quad s'(a)=s'(b) \land s''(a)=s''(b)$\\
-Fakt: $\int_a^b \left(s''(x)\right)^2 dx = \sum_{k=1}^{n-1} \left( f\left[x_k,x_{k+1}\right] - f\left[x_{k-1},x_k\right]\right)s''(x_k) $\\
+\textbf{naturalna:} $\quad s''(a)=0 \land s''(b)=0$\\
+\textbf{zupelna:} $\quad s'(a)=f'(a) \land s'(b)=f'(b)$\\
+\textbf{okresowa:} $\quad s'(a)=s'(b) \land s''(a)=s''(b)$\\
+\textbf{Fakt:} $\int_a^b \left(s''(x)\right)^2 dx = \sum_{k=1}^{n-1} \left( f\left[x_k,x_{k+1}\right] - f\left[x_{k-1},x_k\right]\right)s''(x_k) $\\
 $\lambda_{k}M_{k}+2M_{k}+(1-\lambda_{k})M_{k-1}=6*f[x_{k-1},x_{k},x_{k+1}]$\\ $(k=1,...,n-2)$ oraz $\lambda_{k} = h_{k}/(h_{k}+h_{k+1})$ oraz $h_{k}=x_{k} - x_{k-1}$
 
 \section{Wielomiany Bernsteina}
 
-$Def:$ $B_i^n(u) = {\binom{n}{i}}u^i(1-u)^{n-i} $ Własności:\\
+\textbf{Def.} $B_i^n(u) = {\binom{n}{i}}u^i(1-u)^{n-i} $ \\
+\textbf{Własności:} \\
 $1) \sum_{i=0}^{n} B_i^n(u) = 1$\\
 $2) B_i^n(u) > 0$\\
 $3) B_i^n(u) = (1-u)*B_i^{n-1}(u)+uB_{i-1}^{n-1}(u)$\\
@@ -130,20 +131,20 @@ $
 
 \section{Kwadratury interpolacyjne}
 \noindent $I_p(f) = \int_{a}^{b}p(x)f(x)dx \approx \sum_{k=0}^{n}A_kf(x_k)$, \\
-wiel. węzłowy $\omega(x) = (x-x_0)(x-x_1)..(x-x_n)$
+\textbf{Wiel. węzłowy:} $\omega(x) = (x-x_0)(x-x_1)..(x-x_n)$
 
 \subsection{Kwadratury Newtona-Cotesa}
 $h=(b-a)/n$,\quad $x_k=a+kh$\\
-Wzór trapezów,  $n=1$, $A_0=A_1=h/2$, $R_1(f)=-\frac{h^3}{12}f''(\xi)$\\
-Wzór Simpsona, $n=2$,$A_0=A_2=h/3$, $A_1=4h/3$, $R_2(f)=-\frac{h^5}{90}f^{(4)}(\xi)$\\
-Zł. wzór trapezów: $T_n=h\sum_{k=0}^{n}$ $''$ $f(x_k)$,
+\textbf{Wzór trapezów:}  $n=1$, $A_0=A_1=h/2$, $R_1(f)=-\frac{h^3}{12}f''(\xi)$\\
+\textbf{Wzór Simpsona:} $n=2$,$A_0=A_2=h/3$, $A_1=4h/3$, $R_2(f)=-\frac{h^5}{90}f^{(4)}(\xi)$\\
+\textbf{Zł. wzór trapezów:} $T_n=h\sum_{k=0}^{n}$ $''$ $f(x_k)$,
 $R_n^T(f)=-\frac{h^3n}{12}f''(\xi)$\\
-Zł. wzór Simpsona, $n=2m$,\quad $S_n(f)=(4T_n-T_m)/3$\\
+\textbf{Zł. wzór Simpsona:} $n=2m$,\quad $S_n(f)=(4T_n-T_m)/3$\\
 $R_n^S(f)=-(b-a)\frac{h^4}{180}f^{(4)}(\xi)$\\
-Metoda Romberga: $h_k=(b-a)/2^k$\\
+\textbf{Metoda Romberga:} $h_k=(b-a)/2^k$\\
 $x_i^(k)=a+ih_k,(i=0,1,\dots,2^k)$,\quad $T_{0k}=T_{2^k}(f)$\\
 $T_{mk}=\frac{4^mT_{m-1,k+1} - T{m-1,k}}{4^m-1}$\\
-Reszta Newtona-Cotesa:\\
+\textbf{Reszta Newtona-Cotesa:} \\
 \noindent$  I_p(f) - Q_n(f) = \left\{ \begin{array}{ll}
 \left.\frac{f^{(n+1)}(\xi)}{(n+1)!}\int_{a}^{b} \omega(x) dx
 \right. & \textrm{gdy $ n = 1,3,... $}\\
@@ -176,26 +177,26 @@ $Q_n^{L}(f)=\sum_{k=0}^{n} $ $''$ $ A_kf(u_k), A_k=\frac{\pi}{n}.$
 ${x}^{(k+1)} = B_{\tau} {x}^{(k)} + {c} \hspace{1em} (k \geq 0)$\\
 \textbf{Tw.} Metoda iter. jest zbieżna dla dowolnego $x^{(0)}$, jeśli $\rho(B)<1$,\\
 gdzie $\rho(B):=\max_{1 \leq i \leq n} (\lambda_i)$ to promień spektralny macierzy B.\\
-$B_{\tau} = I - \tau A, \hspace{1em} c = \tau b \hspace{1em} \mbox{(Metoda Richardsona)}$\\
+\textbf{Metoda Richardsona:} $B_{\tau} = I - \tau A, \hspace{1em} c = \tau b \hspace{1em}$\\
 \textbf{Tw.} Załóżmy, że wszystkie $\lambda_i$ spełniają: $0 < \alpha \leq \lambda_i \leq \beta$.\\
 Wtedy metoda Richardsona jest zbieżna dla $0 < \tau < \frac{2}{\beta}$.\\
-$B_J = -D^{-1}(L+U) \hspace{1em} \mbox{(Metoda Jacobiego)}$\\
+\textbf{Metoda Jacobiego:} $B_J = -D^{-1}(L+U) \hspace{1em}$\\
 \textbf{Tw.} Jeśli A jest macierzą ze ściśle dominującą przekątną, tj.\\
 $|a_{ii}|>\sum\limits_{\begin{smallmatrix}j=1\\j\neq i\end{smallmatrix}}^{n}|a_{ij}|$, to wtedy $\|B_J\|_\infty < 1$ i $\|B_S\|_\infty < 1$.\\
-$B_S = -(D+L)^{-1}U \hspace{1em} \mbox{(Metoda Gaussa-Seidela)}$\\
+\textbf{Metoda Gaussa-Seidela:} $B_S = -(D+L)^{-1}U \hspace{1em}$\\
 \textbf{Tw.} Jeśli A jest symetryczna i dodatnio określona, to $\|B_S\|_\infty < 1$.\\
 $B_{\omega} = (I - \omega M)^{-1} (\omega N + (1 - \omega)I), \hspace{1em} M = -D^{-1}L, N = -D^{-1} U$
 
 \section{Teoretycznie przydatne wzory}
 
-Nierówność Cauchy'ego-Schwarza $ \Big(\sum_{k=1}^{n} a_k b_k\Big)^2 \leq \Big(\sum_{k=1}^{n} a_k^2\Big)\Big(\sum_{k=1}^{n} b_k^2\Big) $ \\
-Inaczej: $\langle v, w\rangle \leq \|v\|_2\cdot \|w\|_2$\\
-Bairstowa: $p(z)=a_nz^n+\dots+a_0$
-zwiazek: $b_k=a_k+ub_{k+1}+vb_{k+2}$\\
+\textbf{Nierówność Cauchy'ego-Schwarza:} $ \Big(\sum_{k=1}^{n} a_k b_k\Big)^2 \leq \Big(\sum_{k=1}^{n} a_k^2\Big)\Big(\sum_{k=1}^{n} b_k^2\Big) $ \\
+\textbf{Inaczej:} $\langle v, w\rangle \leq \|v\|_2\cdot \|w\|_2$\\
+\textbf{Bairstowa:} $p(z)=a_nz^n+\dots+a_0$
+\textbf{Związek:} $b_k=a_k+ub_{k+1}+vb_{k+2}$\\
 Niech ciąg $a_k$ będzie zbieżny do g. Jeśli istnieją takie liczby rzeczywiste $p$ i $C$ $(C > 0)$, że
 $\lim_{n \rightarrow \inf}{\frac{|{a_{n+1}-g}|}{|{a_n - g}|^p}} = C, $
-to $p$ jest wykładnikiem zbieżności ciągu, a $C$ – stałą
-asymptotyczną błędu. Dla $p = 1$ oraz $0 < C < 1$ zbieżność jest
+to $p$ jest \textbf{wykładnikiem zbieżności ciągu}, a $C$ – \textbf{stałą
+asymptotyczną błędu}. Dla $p = 1$ oraz $0 < C < 1$ zbieżność jest
 liniowa, dla $p = 2$ – kwadratowa, dla $p = 3$ – sześcienna.
 gdy $p = 1$ i $C = 1$ - zbieżność podliniowa, jeśli $p = 1$, $C = 0$ - nadliniowa.\\
 ${\displaystyle \sin x\pm \sin y=2\sin {\frac {x\pm y}{2}}\cdot \cos {\frac {x\mp y}{2}}} $\\
