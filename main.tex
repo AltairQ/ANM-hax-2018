@@ -34,6 +34,13 @@ left=5mm,right=5mm,top=10mm,bottom=17mm}
 \subsection{Reprezentacja liczb}
 $x = smB^c$, $s$ - znak, $1 \leq m < B$ - mantysa, $c$ - cecha \\
 \textbf{Def.} $t$ - długość mantysy, $u = 2^{-t-1}$ - precyzja arytmetyki \\
+\textbf{Def.} Reguła zaokrąglenia: Jeśli $m = 1.e_{-1}e_{-2}\dots$ to \\
+$\bar{m} = 1.e_{-1}e_{-2}\dots e_{-t} + 0.\underbrace{00...0}_{\text{t-1 razy}}e_{-t-1}$. Wtedy:\\
+$rd(x) = 
+\begin{cases}
+   sB^{c+1}& \text{gdy } e_{-1} = e_{-1} = \dots = e_{-t} = e_{-t-1} = 1\\
+   s\bar{m}B^c,       & \text{wpp.} 
+\end{cases}.$\\
 Błąd zaokrąglenia w górę:
 $|rd(x) - x| \leq 2^{-t-1} 2^c$, \\
 $\frac{|rd(x) - x|}{|x|} \leq  \frac{u}{1+u} < u$ \\
