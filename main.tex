@@ -54,7 +54,8 @@ $|\frac{f(x+h)-f(x)}{f(x)}| \approx |\frac{xf'(x)}{f(x)}||\frac{h}{x}|$\\
 Jeśli $\tilde{y} = f(x + \Delta x)$ (wynik dokładny dla lekko zaburzonych danych), to algorytm jest \textbf{numerycznie bardzo poprawny}.\\
 \section{Interpolacja}
 \subsection{Ilorazy różnicowe}
-$f[x_0,x_1, \ldots, x_k]$ jest symetryczną funkcją zmiennych $x_i$\\ $f = g+c\cdot h \Rightarrow f[x_0,\ldots,x_k]=g[x_0,\ldots,x_k]+c\cdot h[x_0,\ldots,x_k]$,\\ $f[x_0, x_1,\ldots,x_k] = \frac{f[x_1,\ldots,x_k]-f[x_0,\ldots,x_{k-1}]}{x_k-x_0}$.
+$f[x_0,x_1, \ldots, x_k]$ jest symetryczną funkcją zmiennych $x_i$\\ $f = g+c\cdot h \Rightarrow f[x_0,\ldots,x_k]=g[x_0,\ldots,x_k]+c\cdot h[x_0,\ldots,x_k]$,\\ $f[x_0, x_1,\ldots,x_k] = \frac{f[x_1,\ldots,x_k]-f[x_0,\ldots,x_{k-1}]}{x_k-x_0}$,\\
+$f[x_0,x_1,\ldots,x_{n+1}] = f^{(n+1)}(\xi) / (n+1)!$, $\xi \in (a,b)$
 
 \subsection{Postacie wielomianów interpolacyjnych}
 \textbf{Lagrange'a:} $L_n(x) =\sum_{k=0}^ny_k
@@ -87,11 +88,11 @@ $\lambda_{k}M_{k-1}+2M_{k}+(1-\lambda_{k})M_{k+1}=6*f[x_{k-1},x_{k},x_{k+1}]$\\ 
 \section{Wielomiany Ortogonalne}
 
 \subsection{Czebyszew I rodzaju}
-$T_0(x) = 1,\;\;T_1(x) = x$\\
-$T_n(x) = 2x\,T_{n-1}(x) - T_{n-2}(x)$\\
-$T_{k}(x) = \cos(k\arccos x),\,x\in [-1,1]$\\
-zera $T_{n+1}\;(k=0,1,\ldots n)$: \, $t_k=\cos\left(\frac{2k+1}{2n+2}\pi\right)$\\
-ekstrema $T_{n}:\; u_k = \cos\left(\frac{k}{n}\pi\right)$\\
+$T_0(x) = 1,\;\;T_1(x) = x$, $T_n(x) = 2x\,T_{n-1}(x) - T_{n-2}(x)$\\
+$T_{k}(x) = \cos(k\arccos x),\,x\in [-1,1]$, $T_k (-x) = (-1)^k T_k(x)$,\\
+zera $T_{n+1}$: \, $t_k=\cos\left(\frac{2k+1}{2n+2}\pi\right)$,
+ekstrema $T_{n}:\; u_k = \cos\left(\frac{k}{n}\pi\right)\;(k=0\ldots n)$\\
+$\tilde{T}_n = 2^{(1-n)} T_n$ ma min. normę na $[-1,1]$ ze wszystkich $\Pi_{n}$ o wsp. wiodącym $1$ \\
 waga: $p(x) = (1-x^2)^{-1/2}$\\
 $ \int_{-1}^{1} p(x)T_k(x)T_l(x) dx = 0 \qquad (k \neq l) $\\
 $  \int_{-1}^{1} p(x)(T_k(x))^2 dx = \left\{ \begin{array}{ll}
