@@ -53,6 +53,8 @@ $|\frac{f(x+h)-f(x)}{f(x)}| \approx |\frac{xf'(x)}{f(x)}||\frac{h}{x}|$\\
 \textbf{Def.} Niech $\tilde{y}$ - wynik algorytmu obliczającego $f(x)$. Jeśli dla małych $\Delta x, \Delta y$ mamy $\tilde{y} + \Delta y = f(x + \Delta x)$, tzn. wynik jest lekko zaburzony dla lekko zaburzonych danych, to algorytm jest \textbf{numerycznie poprawny}. \\
 Jeśli $\tilde{y} = f(x + \Delta x)$ (wynik dokładny dla lekko zaburzonych danych), to algorytm jest \textbf{numerycznie bardzo poprawny}.\\
 \section{Interpolacja}
+\subsection{Ilorazy różnicowe}
+$f[x_0,x_1, \ldots, x_k]$ jest symetryczną funkcją zmiennych $x_i$\\ $f = g+c\cdot h \Rightarrow f[x_0,\ldots,x_k]=g[x_0,\ldots,x_k]+c\cdot h[x_0,\ldots,x_k]$,\\ $f[x_0, x_1,\ldots,x_k] = \frac{f[x_1,\ldots,x_k]-f[x_0,\ldots,x_{k-1}]}{x_k-x_0}$.
 
 \subsection{Postacie wielomianów interpolacyjnych}
 \textbf{Lagrange'a:} $L_n(x) =\sum_{k=0}^ny_k
