@@ -73,7 +73,7 @@ $y_k = \sum_{j = 0}^{N-1} x_j e^{\frac{2 \pi i j k}{N}} $ gdzie $ (0 \leqslant k
 \textbf{zupelna:} $\quad s'(a)=f'(a) \land s'(b)=f'(b)$\\
 \textbf{okresowa:} $\quad s'(a)=s'(b) \land s''(a)=s''(b)$\\
 \textbf{Fakt:} $\int_a^b \left(s''(x)\right)^2 dx = \sum_{k=1}^{n-1} \left( f\left[x_k,x_{k+1}\right] - f\left[x_{k-1},x_k\right]\right)s''(x_k) $\\
-$\lambda_{k}M_{k}+2M_{k}+(1-\lambda_{k})M_{k-1}=6*f[x_{k-1},x_{k},x_{k+1}]$\\ $(k=1,...,n-2)$ oraz $\lambda_{k} = h_{k}/(h_{k}+h_{k+1})$ oraz $h_{k}=x_{k} - x_{k-1}$
+$\lambda_{k}M_{k-1}+2M_{k}+(1-\lambda_{k})M_{k+1}=6*f[x_{k-1},x_{k},x_{k+1}]$\\ $(k=1,...,n-1)$ oraz $\lambda_{k} = h_{k}/(h_{k}+h_{k+1})$ oraz $h_{k}=x_{k} - x_{k-1}$
 
 \section{Wielomiany Ortogonalne}
 
