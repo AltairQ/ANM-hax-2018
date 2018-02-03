@@ -86,6 +86,13 @@ $y_k = \sum_{j = 0}^{N-1} x_j e^{\frac{2 \pi i j k}{N}} $ gdzie $ (0 \leqslant k
 $\lambda_{k}M_{k-1}+2M_{k}+(1-\lambda_{k})M_{k+1}=6*f[x_{k-1},x_{k},x_{k+1}]$\\ $(k=1,...,n-1)$ oraz $\lambda_{k} = h_{k}/(h_{k}+h_{k+1})$ oraz $h_{k}=x_{k} - x_{k-1}$
 
 \section{Wielomiany Ortogonalne}
+\subsection{Iloczyn skalarny funkcji}
+$\langle f, g \rangle \leq 0; \langle f, f \rangle =0 \Leftrightarrow f \equiv 0 ; \langle f, g \rangle = \langle g, f \rangle ; \langle \alpha f, g \rangle = \alpha \langle f, g \rangle ;$ \\
+$ \langle f + h, g \rangle = \langle f, g \rangle + \langle h, g \rangle$ $p(x)$ - funkcja wagowa\\
+
+$\langle f, g \rangle = \int_{a}^{b} p(x)f(x)g(x) dx$, ${\langle f, g \rangle}_{D} = \sum_{k=0}^n f(x_k)g(x_k) $
+(dla ustalonego $x_k$)
+
 
 \subsection{Czebyszew I rodzaju}
 $T_0(x) = 1,\;\;T_1(x) = x$, $T_n(x) = 2x\,T_{n-1}(x) - T_{n-2}(x)$\\
@@ -94,11 +101,20 @@ zera $T_{n+1}$: \, $t_k=\cos\left(\frac{2k+1}{2n+2}\pi\right)$,
 ekstrema $T_{n}:\; u_k = \cos\left(\frac{k}{n}\pi\right)\;(k=0\ldots n)$\\
 $\tilde{T}_n = 2^{(1-n)} T_n$ ma min. normę na $[-1,1]$ ze wszystkich $\Pi_{n}$ o wsp. wiodącym $1$ \\
 waga: $p(x) = (1-x^2)^{-1/2}$\\
-$ \int_{-1}^{1} p(x)T_k(x)T_l(x) dx = 0 \qquad (k \neq l) $\\
-$  \int_{-1}^{1} p(x)(T_k(x))^2 dx = \left\{ \begin{array}{ll}
-\pi & \textrm{gdy $k=0$}\\
-\pi/2 & \textrm{gdy $ k \geq 1 $}
+
+%$ \int_{-1}^{1} p(x)T_k(x)T_l(x) dx = 0 \qquad (k \neq l) $\\
+$  \langle T_k, T_l \rangle = \left\{ \begin{array}{ll}
+0 & \textrm{gdy $ k \neq l$}\\
+\pi & \textrm{gdy $k=l=0$}\\
+\pi/2 & \textrm{gdy $ k=l \neq 0 $}
 \end{array} \right.$
+
+$\langle T_k, T_l \rangle_{D} = \left\{ \begin{array}{ll}
+0 & \textrm{gdy $ k \neq l$}\\
+n & \textrm{gdy $k=l=0$}\\
+(n+1)/2 & \textrm{gdy $ k=l \neq 0 $}
+\end{array} \right.$ (dla $x_i = t_i; k,l \leq n$) 
+
 \subsection{Legendre'a}
 $P_0(x) = 1, \quad P_1(x) = x-c_1,\;$
  $   P_k(x) = (x-c_k)P_{k-1}(x) - d_k P_{k-2}(x) $\\
