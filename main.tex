@@ -68,8 +68,8 @@ y_k & \textrm{ $ wpp. $}
 \end{array} \right.
 $\\
 Newtona: 
-$ L_n(x) = \sum_{k=0}^n b_kp_k(x)$, gdzie $p_k = \prod_{j = 0}^{k-1} (x - x_j)$, \\
-$b_k = \sum_{i = 0}^k \frac{f(x_i)}{\prod_{j = 0, j\neq i}^k (x_i - x_j)}$
+$ L_n(x) = \sum_{k=0}^n b_kp_k(x)$, gdzie $p_k = \prod_{j = 0}^{k-1} (x - x_j)$, $p_0 = 1$ \\
+$b_k = \sum_{i = 0}^k \frac{f(x_i)}{\prod_{j = 0, j\neq i}^k (x_i - x_j)} = f[x_0, x_1, \ldots, x_k]$
 
 \subsection{Reszta wielomianu interpolacyjnego}
 $f(x)-L_n(x) = \frac{1}{(n+1)!}f^{(n+1)}(\xi_x)p_{n+1}(x) = p_{n+1}(x)f[x_0, x_1, ..., x_n]$\\
