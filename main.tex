@@ -72,7 +72,7 @@ $ L_n(x) = \sum_{k=0}^n b_kp_k(x)$, gdzie $p_k = \prod_{j = 0}^{k-1} (x - x_j)$,
 $b_k = \sum_{i = 0}^k \frac{f(x_i)}{\prod_{j = 0, j\neq i}^k (x_i - x_j)} = f[x_0, x_1, \ldots, x_k]$
 
 \subsection{Reszta wielomianu interpolacyjnego}
-$f(x)-L_n(x) = \frac{1}{(n+1)!}f^{(n+1)}(\xi_x)p_{n+1}(x) = p_{n+1}(x)f[x_0, x_1, ..., x_n]$\\
+$f(x)-L_n(x) = \frac{1}{(n+1)!}f^{(n+1)}(\xi_x)p_{n+1}(x) \overset{x \neq x_i}{=} p_{n+1}(x)f[x, x_0, x_1, ..., x_n]$\\
 $\max_{-1\leq x \leq 1} | f(x)-L_n(x) | = \frac{1}{(n+1)!}\max_{-1\leq x \leq 1} | f^{(n+1)}(x) | \max_{-1\leq x \leq 1} | p_{n+1}(x) |$
 \subsection{DFT}
 \texttt{input:} $[x_0, x_1, ..., x_{N-1}]$, 
