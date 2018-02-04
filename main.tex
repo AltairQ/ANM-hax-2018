@@ -75,9 +75,9 @@ $b_k = \sum_{i = 0}^k \frac{f(x_i)}{\prod_{j = 0, j\neq i}^k (x_i - x_j)} = f[x_
 $f(x)-L_n(x) = \frac{1}{(n+1)!}f^{(n+1)}(\xi_x)p_{n+1}(x) = p_{n+1}(x)f[x_0, x_1, ..., x_n]$\\
 $\max_{-1\leq x \leq 1} | f(x)-L_n(x) | = \frac{1}{(n+1)!}\max_{-1\leq x \leq 1} | f^{(n+1)}(x) | \max_{-1\leq x \leq 1} | p_{n+1}(x) |$
 \subsection{DFT}
-\texttt{input:} $[x_0, x_1, ..., x_N]$\\
-\texttt{output:} $[y_0, y_1, ..., y_N]$
-$y_k = \sum_{j = 0}^{N-1} x_j e^{\frac{2 \pi i j k}{N}} $ gdzie $ (0 \leqslant k < N)$
+\texttt{input:} $[x_0, x_1, ..., x_{N-1}]$, 
+\texttt{output:} $[y_0, y_1, ..., y_{N-1}]$\\ 
+${y_k = \sum_{j = 0}^{N-1} x_j e^{\frac{2 \pi i j k}{N}}} $ gdzie $ (0 \leqslant k < N)$
 \subsection{Spline}
 \textbf{naturalna:} $\quad s''(a)=0 \land s''(b)=0$\\
 \textbf{zupelna:} $\quad s'(a)=f'(a) \land s'(b)=f'(b)$\\
