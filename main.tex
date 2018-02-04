@@ -67,9 +67,13 @@ $  L_n(x) = \left\{ \begin{array}{ll}
 y_k & \textrm{ $ wpp. $}
 \end{array} \right.
 $\\
-Newtona: 
+\textbf{Newtona}: 
 $ L_n(x) = \sum_{k=0}^n b_kp_k(x)$, gdzie $p_k = \prod_{j = 0}^{k-1} (x - x_j)$, $p_0 = 1$ \\
 $b_k = \sum_{i = 0}^k \frac{f(x_i)}{\prod_{j = 0, j\neq i}^k (x_i - x_j)} = f[x_0, x_1, \ldots, x_k]$
+
+\textbf{W bazie Czebyszewa} (tylko dla $x_i$ = zera $T_{n+1}$):\\
+$I_n = \sideset{}{'}\sum_{k=0}^{n} \alpha_{k} T_k(x)$;\ $\alpha_k = \frac{2}{n+1} {\langle f, T_k \rangle}_{D}$ (zob. \ref{iloczyndyskretny} dla zer $T_{n+1}$)
+
 
 \subsection{Reszta wielomianu interpolacyjnego}
 $f(x)-L_n(x) = \frac{1}{(n+1)!}f^{(n+1)}(\xi_x)p_{n+1}(x) \overset{x \neq x_i}{=} p_{n+1}(x)f[x, x_0, x_1, ..., x_n]$\\
@@ -91,7 +95,7 @@ $\langle f, g \rangle \leq 0; \langle f, f \rangle =0 \Leftrightarrow f \equiv 0
 ${\langle f + h, g \rangle = \langle f, g \rangle + \langle h, g \rangle}$
 
 ${\langle f, g \rangle = \int_{a}^{b} p(x)f(x)g(x) dx}$, gdzie  $p(x)$ - funkcja wagowa;
-${{\langle f, g \rangle}_{D} = \sum_{k=0}^n f(x_k)g(x_k)}$, (dla ustalonego $x_k$)
+${{\langle f, g \rangle}_{D} = \sum_{k=0}^n f(x_k)g(x_k)}$, (dla ustalonego $x_k$) \label{iloczyndyskretny}
 \subsection{Czebyszew I rodzaju}
 $T_0(x) = 1,\;\;T_1(x) = x$, $T_n(x) = 2x\,T_{n-1}(x) - T_{n-2}(x)$\\
 $T_{k}(x) = \cos(k\arccos x),\,x\in [-1,1]$, $T_k (-x) = (-1)^k T_k(x)$,\\
@@ -109,7 +113,7 @@ $  \langle T_k, T_l \rangle = \left\{ \begin{array}{ll}
 
 $\langle T_k, T_l \rangle_{D} = \left\{ \begin{array}{ll}
 0 & \textrm{gdy $ k \neq l$}\\
-n & \textrm{gdy $k=l=0$}\\
+n+1 & \textrm{gdy $k=l=0$}\\
 (n+1)/2 & \textrm{gdy $ k=l \neq 0 $}
 \end{array} \right.$ (dla $x_i = t_i; k,l \leq n$) 
 
