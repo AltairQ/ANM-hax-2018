@@ -212,7 +212,7 @@ $B_{\omega} = (I - \omega M)^{-1} (\omega N + (1 - \omega)I), \hspace{1em} M = -
 
 \section{Równania nieliniowe}
 Metoda Newtona: $X_{n+1}  = X_n - \frac{f(X_n)}{f'(X_n)}$\\
-Metoda siecznych: $X_{n+1}  = X_n - \frac{X_n - X_{n-1}}{f(X_n)- f(X_{n-1})}$\\
+Metoda siecznych: $X_{n+1}  = X_n - \frac{f(X_n)(X_n - X_{n-1})}{f(X_n)- f(X_{n-1})}$\\
 Regula falsi - metoda siecznych z zachowaniem warunku $f(X_n)f(X_{n-1})<0$
 Metoda Newtona dla r-krotnego pierwiastka: $X_{n+1}  = X_n - r\frac{f(X_n)}{f'(X_n)}$\\
 Algortym adaptacyjny: $X_{n+1}  = X_n - r_n\frac{f(X_n)}{f'(X_n)}$, $r_n = \frac{X_{n-1} - X_{n-2}}{2X_{n-1} - X_n - X_{n-2}}$\\
